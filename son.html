@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beynəlxalq Aeroportu - Uçuşlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-text">
+                    <span>HEYDƏR ƏLİYEV</span>
+                    <span>BEYNƏLXALQ AEROPORTU</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="info-item"><i class="fa-regular fa-clock"></i> 20:34</div>
+                <div class="info-item">+ 15 °C</div>
+                <nav class="nav-links">
+                    <a href="#">Uçuşlar</a>
+                    <a href="#">Xidmətlər</a>
+                    <a href="#">Nəqliyyat</a>
+                    <a href="#">Kafe və mağazalar</a>
+                    <a href="#">Xəritə</a>
+                </nav>
+                <div class="header-icons">
+                    <i class="fa-solid fa-wheelchair"></i>
+                    <span class="lang-selector">AZ</span>
+                    <i class="fa-solid fa-bars hamburger"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+            
+            <div class="page-title-area">
+                <h1 class="page-title">Uçuşlar</h1>
+                <div class="flight-tabs">
+                    <button class="tab-btn active" onclick="switchTab('gedis')">Gediş</button>
+                    <button class="tab-btn" onclick="switchTab('gelis')">Gəliş</button>
+                </div>
+            </div>
+
+            <div class="table-responsive" id="gedis-table">
+                <table class="flights-table">
+                    <thead>
+                        <tr>
+                            <th>18:00 – 00:00 <i class="fa-solid fa-ellipsis"></i></th>
+                            <th>TƏYİNAT</th>
+                            <th>REYS</th>
+                            <th>TERMİNAL <i class="fa-solid fa-ellipsis"></i></th>
+                            <th>ƏMƏLİYYAT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+    <td><div class="time">23:45</div><div class="date">03 Apr</div></td>
+
+    <td class="destination">Rome (Fiumicino)</td>
+
+    <td><div class="flight-code"><span class="airline-icon">✈</span> AZ 751</div></td>
+
+    <td>Terminal 1</td>
+
+    <td><button class="buy-ticket-btn" onclick="openModal('AZ 751', 'Rome')">Bilet al</button></td>
+
+</tr>
+
+<tr>
+
+    <td><div class="time">00:20</div><div class="date">04 Apr</div></td>
+
+    <td class="destination">Paris (CDG)</td>
+
+    <td><div class="flight-code"><span class="airline-icon">✈</span> AF 134</div></td>
+
+    <td>Terminal 1</td>
+
+    <td><button class="buy-ticket-btn" onclick="openModal('AF 134', 'Paris')">Bilet al</button></td>
+
+</tr>
+ <tr>
+    <td><div class="time">18:05</div><div class="date">04 Apr</div></td>
+    <td class="destination">London (Heathrow)</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> J2 007</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('J2 007', 'London')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">20:20</div><div class="date">03 Apr</div></td>
+    <td class="destination">Saint Petersburg</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> J2 019</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('J2 019', 'St. Petersburg')">Bilet al</button></td>
+</tr>
+<tr>
+
+    <td><div class="time">01:55</div><div class="date">04 Apr</div></td>
+
+    <td class="destination">Ankara (ESB)</td>
+
+    <td><div class="flight-code"><span class="airline-icon">✈</span> TK 112</div></td>
+
+    <td>Terminal 1</td>
+
+    <td><button class="buy-ticket-btn" onclick="openModal('TK 112', 'Ankara')">Bilet al</button></td>
+
+</tr>
+
+                        <tr>
+
+                            <td><div class="time">18:05</div><div class="date">04 Apr</div></td>
+
+                            <td class="destination">London (Heathrow)</td>
+
+                            <td><div class="flight-code"><span class="airline-icon">✈</span> J2 007</div></td>
+
+                            <td>Terminal 1</td>
+
+                            <td><button class="buy-ticket-btn" onclick="openModal('J2 007', 'London')">Bilet al</button></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><div class="time">20:20</div><div class="date">03 Apr</div></td>
+
+                            <td class="destination">Saint Petersburg</td>
+
+                            <td><div class="flight-code"><span class="airline-icon">✈</span> J2 019</div></td>
+
+                            <td>Terminal 1</td>
+
+                            <td><button class="buy-ticket-btn" onclick="openModal('J2 019', 'St. Petersburg')">Bilet al</button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive" id="gelis-table" style="display: none;">
+                <table class="flights-table">
+                    <thead>
+
+                        <tr>
+                            <th>18:00 – 00:00 <i class="fa-solid fa-ellipsis"></i></th>
+                            <th>HARADAN</th>
+                            <th>REYS</th>
+                            <th>TERMİNAL <i class="fa-solid fa-ellipsis"></i></th>
+                            <th>ƏMƏLİYYAT</th>
+                        </tr>
+                      
+<tr>
+    <td><div class="time">20:45</div><div class="date">03 Apr</div></td>
+    <td class="destination">Istanbul (IST)</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> TK 333</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('TK 333', 'Istanbul')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">21:10</div><div class="date">03 Apr</div></td>
+    <td class="destination">Dubai (DXB)</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> FZ 708</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('FZ 708', 'Dubai')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">21:20</div><div class="date">03 Apr</div></td>
+    <td class="destination">Almaty</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> J2 053</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('J2 053', 'Almaty')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">22:30</div><div class="date">03 Apr</div></td>
+    <td class="destination">Tbilisi</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> J2 223</div></td>
+    <td>Terminal 2</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('J2 223', 'Tbilisi')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">23:15</div><div class="date">03 Apr</div></td>
+    <td class="destination">Doha</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> QR 354</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('QR 354', 'Doha')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">23:45</div><div class="date">03 Apr</div></td>
+    <td class="destination">Rome (Fiumicino)</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> AZ 751</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('AZ 751', 'Rome')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">00:20</div><div class="date">04 Apr</div></td>
+    <td class="destination">Paris (CDG)</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> AF 134</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('AF 134', 'Paris')">Bilet al</button></td>
+</tr>
+<tr>
+    <td><div class="time">01:55</div><div class="date">04 Apr</div></td>
+    <td class="destination">Ankara (ESB)</td>
+    <td><div class="flight-code"><span class="airline-icon">✈</span> TK 112</div></td>
+    <td>Terminal 1</td>
+    <td><button class="buy-ticket-btn" onclick="openModal('TK 112', 'Ankara')">Bilet al</button></td>
+</tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="floating-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="feedback-vertical-btn"><i class="fa-regular fa-comment-dots"></i> Feedback</div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-plane-departure"></i> Onlayn Qeydiyyat</h2>
+                <p id="flight-info">Uçuş: - | İstiqamət: -</p>
+            </div>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullname">Ad və Soyad</label>
+                    <input type="text" id="fullname" placeholder="Şəxsiyyət vəsiqəsindəki kimi yazın" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fin-code">FİN Kod (7 simvoldan ibarət)</label>
+                    <input type="text" id="fin-code" maxlength="7" placeholder="Məsələn: 7ABC123" required style="text-transform: uppercase;">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Əlaqə nömrəsi</label>
+                    <input type="tel" id="phone" placeholder="Məsələn: +994 50 000 00 00" required>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-check"></i> Qeydiyyatı Tamamla
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+/* ==========================================
+   ÜMUMİ STİLLƏR
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* ==========================================
+   HEADER (ÜST HİSSƏ)
+   ========================================== */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 30px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.info-item {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.info-item i {
+    margin-right: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.2s;
+}
+
+/* Hover rəngi tünd göy edildi */
+.nav-links a:hover {
+    color: #203989;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.lang-selector {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* ==========================================
+   ƏSAS MƏZMUN (MAIN CONTENT)
+   ========================================== */
+/* İSTƏDİYİNİZ RƏNG: Arxa fon tünd göy edildi */
+.main-content {
+    background-color: #203989;
+    min-height: calc(100vh - 80px);
+    padding: 30px 60px;
+    position: relative;
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.page-title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   TABLAR (Gedis / Gelis)
+   ========================================== */
+.flight-tabs {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    border: none;
+    background: #ffffff;
+    color: #203989; /* Yazı rəngi tünd göy */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background-color: #203989; /* Aktiv tab tünd göy */
+    color: #ffffff;
+}
+
+/* ==========================================
+   CƏDVƏL (TABLE) STİLLƏRİ
+   ========================================== */
+.flights-table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.flights-table th {
+    background-color: #fcfcfc;
+    color: #aaa;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px 25px;
+    border-bottom: 1px solid #f0f0f0;
+    letter-spacing: 0.5px;
+}
+
+.flights-table td {
+    padding: 18px 25px;
+    border-bottom: 1px solid #f2f2f2;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #333;
+}
+
+.flights-table tr:hover {
+    background-color: #fafafa;
+}
+
+.time {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.date {
+    color: #999;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.destination {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.flight-code {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.airline-icon {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-color: #1a428a; /* Uçuş ikonunun mavi fonu */
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 2px;
+}
+
+/* ==========================================
+   DÜYMƏLƏR (Axtarış, Feedback, Bilet Al)
+   ========================================== */
+.floating-search {
+    position: absolute;
+    bottom: -30px;
+    right: 50px;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #203989; /* İkon rəngi tünd göy */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-vertical-btn {
+    position: fixed;
+    right: 0;
+    top: 300px;
+    background-color: #e59a18;
+    color: #fff;
+    padding: 15px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.buy-ticket-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e59a18;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.buy-ticket-btn:hover {
+    background-color: #ca840f;
+}
+
+.buy-ticket-btn:active {
+    transform: scale(0.97);
+}
+
+/* ==========================================
+   POPUP (MODAL) STİLLƏRİ
+   ========================================== */
+.modal-overlay {
+    display: none; /* İlkin vəziyyətdə gizli */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999; /* Hər şeyin üstündə görünməsi üçün */
+    justify-content: center;
+    align-items: center;
+}
+
+/* JavaScript işə düşəndə bu class əlavə olunacaq və modal açılacaq */
+.modal-overlay.active {
+    display: flex !important;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #203989; /* Xətt tünd göy edildi */
+    padding-bottom: 10px;
+}
+
+.modal-header h2 {
+    color: #1a428a;
+    font-size: 22px;
+}
+
+#flight-info {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #203989; /* Fokus halında kənarlar tünd göy */
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #e59a18;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ca840f;
+}
+.status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.status-ontime    { background: #d4edda; color: #155724; }
+.status-delay     { background: #fff3cd; color: #856404; }
+.status-cancelled { background: #f8d7da; color: #721c24; }
+.status-departed  { background: #cce5ff; color: #004085; }
+ 
+/* Uğur kartı */
+.success-card {
+    text-align: center;
+    padding: 20px;
+}
+.success-icon { font-size: 3rem; margin-bottom: 10px; }
+.success-card h3 { color: #155724; margin-bottom: 15px; }
+.booking-details {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: left;
+}
+.booking-details p { margin: 8px 0; }
+.seat-highlight {
+    background: #007bff;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+ 
+/* Xəta/uğur mesajları */
+.msg-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
